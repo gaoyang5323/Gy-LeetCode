@@ -19,8 +19,8 @@ public class Test1 {
         Deque<Integer> stack = new LinkedList<>();
         //循环两边对比
         for (int i = 0; i < length * 2; i++) {
-            while (!stack.isEmpty() &&) {
-
+            while (!stack.isEmpty() && nums[i % length] > nums[stack.peek()]) {
+                ret[stack.pop()] = nums[i % length];
             }
             stack.push(i % length);
         }
